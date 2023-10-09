@@ -1,6 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+# Getting Started
 
 First, run the development server:
 
@@ -16,21 +14,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Best Practices for Writing Good Git Commit Messages
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 📝 Feat (feature): Este prefijo se usa para indicar que la confirmación agrega una nueva característica o funcionalidad al proyecto
 
-## Learn More
+- 🐛 Fix (bugfix): Este prefijo se usa para indicar que la confirmación soluciona un error o bug en el proyecto
 
-To learn more about Next.js, take a look at the following resources:
+- 📚 Docs (documentation): Este prefijo se usa para indicar que la confirmación agrega o actualiza la documentación del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✨ Style (style): Este prefijo se usa para indicar que la confirmación no afecta el código en sí, sino que cambia el formato o estilo del código
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 🚀 Chore (chore): Este prefijo se usa para indicar que la confirmación no afecta el código en sí, sino que realiza cambios en el proceso de construcción o herramientas auxiliares
 
-## Deploy on Vercel
+- 🧪 Test (test): Este prefijo se usa para indicar que la confirmación agrega o actualiza las pruebas del proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 📦 Refactor (refactor): Este prefijo se usa para indicar que la confirmación realiza un cambio en el código que no agrega una nueva funcionalidad ni corrige un error
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 🧹 Cleanup (cleanup): Este prefijo se usa para indicar que la confirmación realiza un cambio en el código que no agrega una nueva funcionalidad ni corrige un error
+
+- 🚧 WIP (work in progress): Este prefijo se usa para indicar que la confirmación es un trabajo en progreso y no debe incluirse en la rama principal del proyecto
