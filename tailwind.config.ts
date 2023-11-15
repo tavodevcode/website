@@ -51,6 +51,10 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
+      fontFamily: {
+        poppins: ['var(--font-poppins)', 'serif'],
+        caveat: ['var(--font-caveat)', 'cursive']
+      },
       keyframes: {
         'accordion-down': {
           from: { height: 0 },
