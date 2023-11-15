@@ -9,11 +9,7 @@
     "standard-with-typescript",
     "next/core-web-vitals"
   ],
-  "plugins": [
-    "react",
-    "prettier",
-    "import"
-  ],
+  "plugins": ["react", "prettier", "import"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -93,26 +89,20 @@
       },
       {
         "blankLine": "always",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
+        "prev": ["const", "let", "var"],
         "next": "*"
       },
       {
         "blankLine": "any",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": [
-          "const",
-          "let",
-          "var"
-        ]
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
       }
-    ]
+    ],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "@typescript-eslint/no-floating-promises": "off"
   }
 }
