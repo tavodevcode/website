@@ -1,0 +1,26 @@
+/* .terminalText {
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+/* Animation */
+/* .terminalText { */
+/* @apply animate-[animated-text] animate-duration-[8000ms] animate-ease-in-out animate-infinite animate-fill-forwards; */
+/* animation: animated-text 5s steps(150, end) 1s 1 normal both; */
+/* } */
+
+/* @keyframes animated-text {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+} */
+
+/* .{
+  margin: 0px;
+  padding: 0px;
+  
+  margin-top: 20px;
+} */
