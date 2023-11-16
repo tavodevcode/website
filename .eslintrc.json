@@ -4,11 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "standard-with-typescript",
-    "next/core-web-vitals"
-  ],
+  "extends": ["plugin:react/recommended", "standard-with-typescript", "next/core-web-vitals"],
   "plugins": ["react", "prettier", "import"],
   "overrides": [],
   "parserOptions": {
@@ -50,16 +46,7 @@
     "import/order": [
       "warn",
       {
-        "groups": [
-          "type",
-          "builtin",
-          "object",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["type", "builtin", "object", "external", "internal", "parent", "sibling", "index"],
         "pathGroups": [
           {
             "pattern": "~/**",
