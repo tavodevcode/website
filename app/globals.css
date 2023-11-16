@@ -1,16 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 222.2 84% 4.9%;
     --primary: 262.1 83.3% 57.8%;
     --primary-foreground: 210 20% 98%;
     --secondary: 220 14.3% 95.9%;
@@ -26,13 +25,13 @@
     --ring: 262.1 83.3% 57.8%;
     --radius: 1rem;
   }
- 
+
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: 222.2 84% 4.9%;
     --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
+    --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 20% 98%;
     --primary: 263.4 70% 50.4%;
     --primary-foreground: 210 20% 98%;
@@ -49,7 +48,7 @@
     --ring: 263.4 70% 50.4%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -61,4 +60,21 @@
   ul {
     margin-block-start: 0px !important;
   }
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #525252af;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ae00ff55;
+  border-radius: 10px;
+}
+
+.x {
+  background-color: #ff04e2a3;
 }
