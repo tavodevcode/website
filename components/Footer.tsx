@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 import Logo from './svgs/logo'
 import { Linkedin } from './svgs/linkedin'
@@ -20,7 +21,9 @@ export default function Footer(): React.ReactElement {
     <div className="w-full flex flex-col container justify-center items-center mt-[90px]">
       <div className="w-full h-full flex justify-between px-5 items-center bg-[#ffffff01]">
         <div className="w-1/4 h-full">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
         <div className="w-1/4 h-full flex justify-end items-start">
           <div className="flex justify-center items-center gap-2">
