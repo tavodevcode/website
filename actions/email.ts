@@ -18,7 +18,7 @@ export const sendEmail = async (prevState: State, formData: FormData): Promise<S
     to: ['tavodevcode@gmail.com'],
     subject: 'Hello world',
     text: '',
-    react: EmailTemplate({ firstName: 'email' })
+    react: EmailTemplate({ email: 'email' })
   })
 
   return { message: 'Email sent' }
