@@ -1,113 +1,158 @@
 import Image from 'next/image'
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import { SlidingTitleAnimation } from '@/components/sliding-animation-title'
+import { AnimatedGradientText } from '@/components/animated-gradient-text'
+import { InfiniteHorizontalAnimation } from '@/components/infinite-horizontal-animation'
+// import Particles from '@/components/particles'
+import ProjectCardList from '@/components/project-card-list'
+import WorkTimeline from '@/components/work-timeline'
+import Terminal from '@/components/terminal'
+import ContactForm from '@/components/contact-form'
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+export default function Home(): JSX.Element {
+  return (
+    <main className="w-full min-h-screen flex flex-col gap-10 relative overflow-x-clip mt-[50px]">
+      {/* <div className="-z-10 absolute -right-[40%] -top-[500px] w-[1550px] h-[1550px] [background:radial-gradient(closest-side,#a704ffa3,transparent)]" /> */}
+      <div className="-z-10 absolute -left-[40%] -top-[1000px] w-[1550px] h-[1550px] [background:radial-gradient(closest-side,#a704ffa3,transparent)]" />
+
+      <section className="w-full h-auto container flex overflow-hidden font-poppins">
+        <div className="flex flex-col w-1/2">
+          <SlidingTitleAnimation />
+        </div>
+        <div className="w-1/2">
+          <Image
+            priority
+            alt="image-header"
+            className="ml-[20px] mt-[20px]"
+            height="600"
+            src={'./Image-header.svg'}
+            width="600"
+          />
+        </div>
+      </section>
+
+      <section className="w-full min-h-[500px] container flex relative mt-[90px] font-poppins ">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
           priority
+          alt="image-from-rawpixel-id-12179633"
+          className="absolute -right-[200px] -top-[100px] -rotate-[12deg]"
+          height="300"
+          src={'/ui/image-from-rawpixel-id-12179633-png.png'}
+          width="300"
+        />
+
+        <div className="w-1/2 flex justify-center items-center">
+          <Image
+            priority
+            alt="image-profile"
+            className="w-1/2 flex justify-center items-center rounded-full mr-20"
+            height="300"
+            src={'/gustavo.jpg'}
+            width="300"
+          />
+        </div>
+        <div className="w-auto flex flex-col justify-center">
+          <h1 className="w-[580px] font-extrabold text-mainblack text-[40px] leading-normal">
+            Sobre mi carrera y quien soy
+          </h1>
+          <p className="w-[580px] font-light mt-[15px] text-mainblack text-[18px] opacity-80">
+            Peter Parker era un adolescente como cualquier otro. Estudiaba en el Instituto Midtown de la ciudad de Nueva
+            York, y vivía en Queens con su tía May y su tío Ben. Peter era muy buen estudiante y uno de los chicos más
+            inteligentes del instituto. Por desgracia, sus buenas notas no ayudaban a hacerle muy popular entre sus
+            compañeros de clase.
+          </p>
+        </div>
+      </section>
+
+      <section
+        className="w-full h-auto container flex flex-col justify-center items-center font-poppins mt-[50px] gap-5"
+        id="abilities"
+      >
+        <AnimatedGradientText className="text-6xl mb-11" text="Habilidades" />
+
+        <InfiniteHorizontalAnimation
+          svgs={[
+            { svg: 'Angular' },
+            { svg: 'Antdesign', title: 'AntDesign' },
+            { svg: 'Aws' },
+            { svg: 'Azure' },
+            { svg: 'Bigcommerce' },
+            { svg: 'Bootstrap', title: 'Bootstrap' },
+            { svg: 'Codeigniter', title: 'CodeIgniter' },
+            { svg: 'Docker' },
+            { svg: 'Eslint', title: 'ESLint' },
+            { svg: 'Express' },
+            { svg: 'Figma', title: 'Figma' }
+          ]}
+        />
+
+        <InfiniteHorizontalAnimation
+          svgs={[
+            { svg: 'Git' },
+            { svg: 'Graphql' },
+            { svg: 'Java' },
+            { svg: 'Javascript', title: 'JavaScript' },
+            { svg: 'Jquery' },
+            { svg: 'Laravel', title: 'Laravel' },
+            { svg: 'Linux', title: 'Linux' },
+            { svg: 'MongoDB', title: 'MongoDB' },
+            { svg: 'MySQL' },
+            { svg: 'Nest', title: 'NestJs' },
+            { svg: 'Next', title: 'NextJs' }
+          ]}
+          variant="reverse"
+        />
+
+        <InfiniteHorizontalAnimation
+          svgs={[
+            { svg: 'Php' },
+            { svg: 'Postgres', title: 'Postgres' },
+            { svg: 'Postman', title: 'Postman' },
+            { svg: 'Prisma', title: 'Prisma' },
+            { svg: 'ReactJs', title: 'ReactJs' },
+            { svg: 'Sass' },
+            { svg: 'Tailwind', title: 'Tailwind' },
+            { svg: 'Typescript', title: 'TypeScript' },
+            { svg: 'Vtex', title: 'Vtex' },
+            { svg: 'Vue', title: 'VueJs' },
+            { svg: 'Windows', title: 'Windows' }
+          ]}
+        />
+      </section>
+
+      <ProjectCardList />
+
+      <div className="w-full h-[700px] flex container relative font-poppins">
+        <div className="-z-10 absolute left-[60%] -top-[500px] w-[1550px] h-[1550px] [background:radial-gradient(closest-side,#a704ffa3,transparent)]" />
+
+        <div className="w-1/2 h-full flex justify-center items-center flex-col">
+          <div className="w-[80%] h-auto">
+            <h1 className="w-[580px] font-extrabold text-mainblack text-[40px] leading-normal">
+              Buenas practicas y creacion de aplicaiones a escala.
+            </h1>
+            <p className="font-light mt-[15px] text-mainblack text-[18px] opacity-80">
+              Siempre siguiendo las mejores prácticas posibles basada en la documentación oficial de las tecnologías
+              requeridas.
+            </p>
+          </div>
+        </div>
+        <Terminal />
+
+        <Image
+          priority
+          alt="image-from-rawpixel-id-12706083-png"
+          className="absolute -right-[150px] -bottom-[50px] z-30 -rotate-[15deg]"
+          height="450"
+          src={'/ui/image-from-rawpixel-id-12706083-png.png'}
+          width="450"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <WorkTimeline />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <ContactForm />
     </main>
   )
 }
+
+// {/* <Spline /> */}
