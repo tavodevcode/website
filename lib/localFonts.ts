@@ -102,7 +102,7 @@ export const caveat = localFont({
       weight: '500'
     },
     {
-      path: '../fonts/caveat/Caveat-Semibold.ttf',
+      path: '../fonts/caveat/Caveat-SemiBold.ttf',
       weight: '600'
     },
     {
