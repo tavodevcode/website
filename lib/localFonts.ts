@@ -91,24 +91,24 @@ export const poppins = localFont({
   variable: '--font-poppins'
 })
 
-export const caveat = localFont({
-  src: [
-    {
-      path: '../fonts/Caveat-Regular.ttf',
-      weight: '400'
-    },
-    {
-      path: '../fonts/Caveat-Medium.ttf',
-      weight: '500'
-    },
-    {
-      path: '../fonts/Caveat-Semibold.ttf',
-      weight: '600'
-    },
-    {
-      path: '../fonts/Caveat-Bold.ttf',
-      weight: '700'
-    }
-  ],
-  variable: '--font-caveat'
-})
+// export const caveat = localFont({
+//   src: [
+//     {
+//       path: '../fonts/Caveat-Regular.ttf',
+//       weight: '400'
+//     },
+//     {
+//       path: '../fonts/Caveat-Medium.ttf',
+//       weight: '500'
+//     },
+//     {
+//       path: '../fonts/Caveat-Semibold.ttf',
+//       weight: '600'
+//     },
+//     {
+//       path: '../fonts/Caveat-Bold.ttf',
+//       weight: '700'
+//     }
+//   ],
+//   variable: '--font-caveat'
+// })
