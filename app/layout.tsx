@@ -2,10 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 import { ThemeProvider } from '@/components/theme-provider'
-import {
-  //  caveat,
-  poppins
-} from '@/lib/localFonts'
+import { caveat, poppins } from '@/lib/localFonts'
 import Header from '@/components/header'
 import ReturnToHeader from '@/components/return-to-header'
 import { Toaster } from '@/components/ui/toaster'
@@ -19,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${poppins.variable}`}>
+      <body className={`${poppins.variable} ${caveat.variable}`}>
         <ThemeProvider enableSystem attribute="class" defaultTheme="dark">
           <Header />
 
