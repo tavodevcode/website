@@ -8,6 +8,7 @@ import ProjectCardList from '@/components/project-card-list'
 import WorkTimeline from '@/components/work-timeline'
 import Terminal from '@/components/terminal'
 import ContactForm from '@/components/contact-form'
+// import { EmailTemplate } from '@/components/email-template'
 
 export default function Home(): JSX.Element {
   return (
@@ -151,6 +152,7 @@ export default function Home(): JSX.Element {
       <WorkTimeline />
 
       <ContactForm />
+      {/* <EmailTemplate email="si" /> */}
     </main>
   )
 }

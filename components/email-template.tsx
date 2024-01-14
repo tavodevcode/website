@@ -41,7 +41,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ email })
       <img
         alt=""
         height="auto"
-        src="https://lh3.google.com/u/0/d/17eiC_fqporNoFw3JBgUa6o0-hOyDSyDS=w1920-h1080-iv1"
+        src="https://lh3.google.com/u/0/d/17eiC_
+        fqporNoFw3JBgUa6o0-hOyDSyDS=w1920-h1080-iv1"
         style={{
           marginTop: '30px',
           marginBottom: '30px'
